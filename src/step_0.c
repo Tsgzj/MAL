@@ -30,7 +30,7 @@ _eval(char *eq) {
 
 void
 _print(char *res) {
-    printf("here %s\n", res);
+    printf("%s\n", res);
 }
 
 void
