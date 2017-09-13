@@ -1,4 +1,4 @@
-CC = gcc
+CC = clang
 CFLAGS = -o3
 LDFLAGS = -lreadline
 BUILD = build
@@ -10,10 +10,10 @@ BINS = $(OBJS:%.o=%)
 all: $(BINS)
 
 $(OBJS): %.o: %.c
-	$(CC) $(CFLAGS) -c $(@:%.o=%.c) -o $(build)/$@
+	$(CC) $(CFLAGS) -c $(@:%.o=%.c) -o $(BUILD)/$@
 
 $(BINS): %: %.o
-	$(CC) $(build)/$+ -o build/$@ $(LDFLAGS)
+	$(CC) $(BUILD)/$+ -o build/$@ $(LDFLAGS)
 
 clean:
-	rm -f $(BINS)
+	rm -f $(BINS) $(OBJS)
