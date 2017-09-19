@@ -1,3 +1,3 @@
 #include <types.h>
 
-MalType type = MalList;
+MalType tokens = MalList;
